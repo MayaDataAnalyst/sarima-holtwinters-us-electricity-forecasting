@@ -60,15 +60,13 @@ These transformations help prepare the data for SARIMA modeling.
 
 - This suggests that the resulting time series is **stationary**, which is a necessary condition for fitting a **SARIMA model**.
 
+---
+
 # **(A) Applying the SARIMA Model to Monthly Electricity Generation Data**
-### **Introduction**
 The **Seasonal Autoregressive Integrated Moving Average (SARIMA)** model is an advanced extension of the ARIMA model. It incorporates seasonal components and captures complex patterns—such as trends and periodic fluctuations—in time series data. SARIMA is widely used in fields like economics, energy, and meteorology for forecasting time-dependent phenomena. A key assumption of the model is that the data must be stationary, which often requires differencing techniques to remove trends and seasonality.
 <p>
 
 In this project, two techniques were used to identify the optimal parameters `(p, d, q, P, D, Q)` of the SARIMA model:
-
----
-
 ### **1. Custom Grid Search**  
 An iterative algorithm explores combinations of SARIMA parameters `(p, d, q)` and `(P, D, Q)` using the training dataset. For each candidate model,
 - **AIC** (Akaike Information Criterion) and **SSE** (Sum of Squared Errors) were computed to assess model fit.  
@@ -76,7 +74,7 @@ An iterative algorithm explores combinations of SARIMA parameters `(p, d, q)` an
 
 The model with the lowest AIC—and the lowest SSE is selected. This iterative algorithm was adapted from an R-based framework developed by Dr. William Thistleton and Dr. Tura Sadigov from the State University of New York Polytechnic Institute.
 
-The custom grid search algorithm identifies **SARIMA(1, 1, 1) × (0, 1, 1)[12]** as the best-fit model, with the following performance metrics:
+The custom grid search algorithm identified **SARIMA(1, 1, 1) × (0, 1, 1)[12]** as the best-fit model, with the following performance metrics:
 - **AIC**: 4576.52  
 - **SSE**: 1.0592 × 10¹⁰  
 - **Ljung-Box p-value**: 0.9347
@@ -85,12 +83,10 @@ The custom grid search algorithm identifies **SARIMA(1, 1, 1) × (0, 1, 1)[12]**
 
 ### **2. `auto_arima()` from `pmdarima`**  
 This function automatically selects the best SARIMA model based on **AIC/BIC**, while internally handling differencing and seasonal component selection.
-
-The `auto_arima()` function selects **ARIMA(0,1,2)(0,1,1)[12]** as the best model according to the lowest AIC = 4579.4537.
+The `auto_arima()` function selected **ARIMA(0,1,2)(0,1,1)[12]** as the best model according to the lowest AIC = 4579.4537.
 
 ## **Selecting the Best-Fit SARIMA Model**
-The custom grid search method identified **ARIMA(1,1,1)(0,1,1)[12]** as the best-fit model with an AIC of **4576.52**, while the `auto_arima()` function selected **ARIMA(0,1,2)(0,1,1)[12]** with an AIC of **4579.45**.  
-Since the former yields a lower AIC, **ARIMA(1,1,1)(0,1,1)[12]** was selected as the final model.
+The custom grid search method identified **ARIMA(1,1,1)(0,1,1)[12]** as the best-fit model with an AIC of **4576.52**, while the `auto_arima()` function selected **ARIMA(0,1,2)(0,1,1)[12]** with an AIC of **4579.45**. Since the former yielded a lower AIC, **ARIMA(1,1,1)(0,1,1)[12]** was selected as the final model.
 
 ### **The general equation of the SARIMA(1,1,1)(0,1,1)[12] model fitted above is:**
 
