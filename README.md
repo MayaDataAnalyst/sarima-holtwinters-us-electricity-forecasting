@@ -40,4 +40,21 @@ To evaluate the forecasting performance of time series mode, includingas SARIMA 
 
 <img width="1031" height="491" alt="image" src="https://github.com/user-attachments/assets/5b21cab8-5ee3-4618-8155-05370d985eba" />
 
+### **Time Series Transformation Plots**
 
+The plots below show:
+
+1. **Original Series:** Monthly electricity generation from natural gas (shows trend and seasonality).  
+2. **First-Order Differenced:** Removes trend but seasonal pattern remains.  
+3. **Seasonally Differenced:** Removes both trend and seasonality, making the series more stationary.
+
+These transformations help prepare the data for SARIMA modeling.
+<img width="1190" height="1189" alt="image" src="https://github.com/user-attachments/assets/84037784-2628-49fc-b249-5d303997ca06" />
+
+### **Interpretation of the Differencing Plots Above for Stationarity**
+
+- The **first-order differenced (d=1) time series** still exhibits a repeating seasonal pattern, indicating that **seasonality remains** after removing the trend.
+
+- The **seasonally differenced (D=1) time series** (after applying both first-order and seasonal differencing) shows that the **seasonal pattern has been removed**, and the fluctuations appear **more stable and random** over time.
+
+- This suggests that the resulting time series is **stationary**, which is a necessary condition for fitting a **SARIMA model**.
