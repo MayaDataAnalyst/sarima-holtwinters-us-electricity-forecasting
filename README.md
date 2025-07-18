@@ -153,9 +153,11 @@ The Holt-Winters model, also known as Triple Exponential Smoothing, is an extens
 <p>
 
 The general equation of the additive Holt-Winters - Triple Exponential Smoothing is expressed as:  
+$$
 F_{t+k} = L_t + k \times T_t + S_{t+k-12}
+$$
 
-<img width="1170" height="374" alt="image" src="https://github.com/user-attachments/assets/49adbd2c-6be7-4f3e-8dc7-60b5171324cb" />
+<img width="1614" height="445" alt="image" src="https://github.com/user-attachments/assets/a1978cc9-a077-48f2-930d-f3075cc378f2" />
 
 ---
 
