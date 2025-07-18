@@ -158,7 +158,7 @@ $$
 F_{t+k} = L_t + k \times T_t + S_{t+k-12}
 $$
 
-<img width="1614" height="445" alt="image" src="https://github.com/user-attachments/assets/a1978cc9-a077-48f2-930d-f3075cc378f2" />
+<img width="1658" height="890" alt="image" src="https://github.com/user-attachments/assets/6c909379-b0e1-41bf-853e-9a79e6551506" />
 
 ---
 
