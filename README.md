@@ -110,9 +110,9 @@ $$
 
 
 Where:
- - X_{t-1}, X_{t-2}, X_{t-12}, ... are the **observed values** of the time series from the previous month, two months ago, twelve months ago, and so on.
- - Z_{t-1} represents the **non-seasonal moving average (MA(1))** component.
- - Z_{t-12} represents the **seasonal moving average (SMA(1))** component at lag 12, which captures seasonal shocks repeating every 12 periods (e.g., months).
+- \( X_{t-1}, X_{t-2}, X_{t-12}, \ldots \) are the **observed values** of the time series from the previous month, two months ago, twelve months ago, and so on.
+- Z_{t-1} represents the **non-seasonal moving average (MA(1))** component.
+- Z_{t-12} represents the **seasonal moving average (SMA(1))** component at lag 12, which captures seasonal shocks repeating every 12 periods (e.g., months).
 
 ---
 ### **Diagnostic Plots for the SARIMAX Model**
