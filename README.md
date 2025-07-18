@@ -93,8 +93,8 @@ The custom grid search method identified **ARIMA(1,1,1)(0,1,1)[12]** as the best
 $$(1 - 0.8738B)(1 - B)(1 - B^{12})X_t = (1 - 1.0000B)(1 - 0.6026B^{12})Z_t$$
 
 Where:
-- $$ X_{t} $$ is the **predicted value** of the time series (monthly electricity generation from natural gas) at time t,
-- $$ B $$ is the **backshift operator:**
+- X_{t} is the **predicted value** of the time series (monthly electricity generation from natural gas) at time t,
+- B is the **backshift operator:**
  $$BX_t = X_{t-1} \    or   \  B^{12}X_t = X_{t-12} \ $$
 - \( Z_t \) is the **white noise error term**, assumed to follow a normal distribution:  
  -  Z_t \sim \mathcal{N}(0,\sigma^2) \quad \text{with} \quad \sigma^2 = 3.13 \times 10^7 $$
