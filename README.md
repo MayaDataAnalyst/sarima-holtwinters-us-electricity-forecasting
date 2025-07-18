@@ -23,7 +23,7 @@ The primary time series used in this project is **monthly electricity generated 
 <img width="1186" height="491" alt="image" src="https://github.com/user-attachments/assets/59291c4f-53c9-4323-b63a-8e9ad08660f0" />
 
 ---
----
+
 #### **List of Time Series Models Developed and Evaluated in This Project**
 The following time series models were developed and compared to forecast monthly electricity generation:
 - **SARIMA model**
