@@ -142,7 +142,7 @@ The SARIMA model was used to predict monthly electricity generation from natural
 
 In total, the SARIMA model generated **111 monthly predictions**, combining both test and forecast periods.  
 The predicted values were then visualized alongside the actual training and test samples to assess the model’s performance and long-term forecasting behavior.
-<img width="990" height="490" alt="image" src="https://github.com/user-attachments/assets/b5105009-fac3-40cc-bbf0-c0f5219ecbd9" />
+<img width="990" height="490" alt="image" src="https://github.com/user-attachments/assets/946d182f-1a7a-48dc-bdfa-3f473ff04681" />
 
 ---
 
@@ -174,7 +174,7 @@ Similar to the SARIMA model, the Holt-Winters model was used to predict monthly 
 - **Forecast period**: 60 future observations from **April 2025 to March 2030**
 
 The predicted values were plotted alongside the actual training and test data to evaluate the model’s accuracy and long-term forecasting performance.
-<img width="990" height="490" alt="image" src="https://github.com/user-attachments/assets/053da568-1d46-42f2-b05e-c092cc85a72c" />
+<img width="991" height="490" alt="image" src="https://github.com/user-attachments/assets/ecc13e9c-c7bb-4be7-b529-d0357fbaab5f" />
 
 ---
 # **Plotting the RMSE and MAE Metrics for the SARIMA and Holt-Winters Models.**
