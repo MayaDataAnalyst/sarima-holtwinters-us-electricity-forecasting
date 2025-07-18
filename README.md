@@ -96,8 +96,8 @@ Where:
 - X_t is the **predicted value** of the time series (monthly electricity generation from natural gas) at time t,
 - B is the **backshift operator:**
  $$BX_t = X_{t-1} \    or   \  B^{12}X_t = X_{t-12} \ $$
-- \( Z_t \) is the **white noise error term**, assumed to follow a normal distribution:  
-  $$ Z_t \sim \mathcal{N}(0,\sigma^2) \quad \text{with} \quad \sigma^2 = 3.13 \times 10^7 $$
+- \( Z_t \) is the **white noise error term**, assumed to follow a normal distribution:
+$$ Z_t \sim \mathcal{N}(0,\sigma^2) \quad \text{with} \quad \sigma^2 = 3.13 \times 10^7 $$
 
 <br>
 
