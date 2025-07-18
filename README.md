@@ -158,12 +158,11 @@ F_{t+k} = L_t + k \times T_t + S_{t+k-12}
 $$
 
 where:
+- F<sub>t+k</sub>: represents the forecasted value for 𝑘 periods ahead from time 𝑡.  
 - L<sub>t</sub>: level component at time t  
 - k: forecast horizon, or the number of steps ahead to predict from time t  
 - T<sub>t</sub>: trend component at time t  
 - S<sub>t+k−12</sub>: seasonal component at time t + k − 12  
-
-<img width="918" height="288" alt="image" src="https://github.com/user-attachments/assets/7daf53ab-5bac-417d-b508-2582c3ec4861" />
 
 ---
 
