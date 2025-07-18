@@ -93,8 +93,8 @@ The custom grid search method identified **ARIMA(1,1,1)(0,1,1)[12]** as the best
 $$(1 - 0.8738B)(1 - B)(1 - B^{12})X_t = (1 - 1.0000B)(1 - 0.6026B^{12})Z_t$$
 
 Where:
-- \( X_t \) is the **predicted value** of the time series (monthly electricity generation from natural gas) at time \( t \),
-- \( B \) is the **backshift operator:**
+- $$ X_{t} $$ is the **predicted value** of the time series (monthly electricity generation from natural gas) at time t,
+- $$ B $$ is the **backshift operator:**
  $$BX_t = X_{t-1} \    or   \  B^{12}X_t = X_{t-12} \ $$
 - \( Z_t \) is the **white noise error term**, assumed to follow a normal distribution:  
  -  Z_t \sim \mathcal{N}(0,\sigma^2) \quad \text{with} \quad \sigma^2 = 3.13 \times 10^7 $$
@@ -102,8 +102,9 @@ Where:
 <br>
 
 The equation above is expanded using the backshift operator as follows:
-
+$$
 \mathbf{X_t} = 1.8738\mathbf{X_{t-1}} - 0.8738\mathbf{X_{t-2}} + \mathbf{X_{t-12}} - 1.8738\mathbf{X_{t-13}} + 0.8738\mathbf{X_{t-14}} + \mathbf{Z_t} - \mathbf{Z_{t-1}} - 0.6026\mathbf{Z_{t-12}}
+$$
 
 Where:
  - X_{t-1}, X_{t-2}, X_{t-12}, ... are the **observed values** of the time series from the previous month, two months ago, twelve months ago, and so on.
@@ -143,7 +144,7 @@ The predicted values were then visualized alongside the actual training and test
 
 ---
 
-# **(B) Applying the Holt-Winters Model Model to Monthly Electricity Generation Data**
+# **(B) Applying the Holt-Winters Model to Monthly Electricity Generation Data**
 <p align="justify">
 The Holt-Winters model, also known as Triple Exponential Smoothing, is an extension of the exponential smoothing technique designed to capture three key components of a time series: level (the baseline value), trend (the direction or slope), and seasonality (regular periodic fluctuations). This makes it particularly well-suited for forecasting time series data that exhibits both trend and seasonal patterns. However, despite its strengths, the Holt-Winters model does not incorporate exogenous variables (i.e., external regressors). In other words, it generates forecasts based solely on the historical values of the target variable, without accounting for the influence of potential external factors. In cases where such external variables significantly contribute to the time series, alternative models like SARIMA with exogenous regressors (SARIMAX) or Facebook Prophet may provide better predictive performance.
 <p>
@@ -151,7 +152,7 @@ The Holt-Winters model, also known as Triple Exponential Smoothing, is an extens
 The general equation of the additive Holt-Winters - Triple Exponential Smoothing is expressed as:  
 F_{t+k} = L_t + k \times T_t + S_{t+k-12}
 
-<img width="1559" height="540" alt="image" src="https://github.com/user-attachments/assets/02017510-988c-403a-bd79-cab3b910b435" />
+<img width="1170" height="374" alt="image" src="https://github.com/user-attachments/assets/49adbd2c-6be7-4f3e-8dc7-60b5171324cb" />
 
 ---
 
@@ -176,8 +177,10 @@ The comparison of RMSE and MAE on the test dataset indicates that the Holt-Winte
 ---
 ## **Static and Interactive Plots of Actual vs. Forecasted Natural Gas Electricity Generation (SARIMA & Holt-Winters)**
 The plots below illustrate the actual (observed) and forecasted monthly electricity generation from natural gas, covering the test period (January 2021 – March 2025) and extended projections through March 2030. The forecasts were generated using the SARIMA and Holt-Winters (Triple Exponential Smoothing) models.
+### **Static Plot:
 <img width="1187" height="491" alt="image" src="https://github.com/user-attachments/assets/74d1b6aa-110f-4bcf-af95-636b7d375204" />
 
+### **Interactive Plot:
 <img width="2596" height="955" alt="image" src="https://github.com/user-attachments/assets/da891158-1ceb-45d8-9f79-67f6227faffe" />
 
 ---
@@ -192,6 +195,5 @@ The findings from this project can support decision-makers and energy planners i
 ### **Recommendations for Future Work**
 While this study focused on natural gas, electricity in the U.S. is generated from multiple energy sources such as coal, nuclear, wind, and solar. **For future work**, it is recommended to extend this analysis by developing a **multivariate time series model** that predicts electricity generation from multiple energy sources, enabling a more comprehensive understanding of the national electricity supply mix.
 One possible extension of this work is to incorporate **external factors**—such as fuel prices or policy changes—into the forecasting models. Time series techniques like SARIMAX and Facebook Prophet with regressors are well-suited for modeling such relationships, offering deeper insights into the drivers of electricity generation trends.
-<br>
 
 
