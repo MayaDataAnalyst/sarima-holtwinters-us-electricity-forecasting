@@ -102,9 +102,11 @@ Where:
 <br>
 
 The equation above is expanded using the backshift operator as follows:
+
 $$
 \mathbf{X_t} = 1.8738\mathbf{X_{t-1}} - 0.8738\mathbf{X_{t-2}} + \mathbf{X_{t-12}} - 1.8738\mathbf{X_{t-13}} + 0.8738\mathbf{X_{t-14}} + \mathbf{Z_t} - \mathbf{Z_{t-1}} - 0.6026\mathbf{Z_{t-12}}
 $$
+
 
 Where:
  - X_{t-1}, X_{t-2}, X_{t-12}, ... are the **observed values** of the time series from the previous month, two months ago, twelve months ago, and so on.
