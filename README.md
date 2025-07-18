@@ -97,23 +97,20 @@ Where:
 - \( B \) is the **backshift operator:**
  $$BX_t = X_{t-1} \    or   \  B^{12}X_t = X_{t-12} \ $$
 - \( Z_t \) is the **white noise error term**, assumed to follow a normal distribution:  
-  $$ Z_t \sim \mathcal{N}(0,\sigma^2) \quad \text{with} \quad \sigma^2 = 3.13 \times 10^7 $$
+ -  Z_t \sim \mathcal{N}(0,\sigma^2) \quad \text{with} \quad \sigma^2 = 3.13 \times 10^7 $$
 
 <br>
 
 The equation above is expanded using the backshift operator as follows:
 
-$$
 \mathbf{X_t} = 1.8738\mathbf{X_{t-1}} - 0.8738\mathbf{X_{t-2}} + \mathbf{X_{t-12}} - 1.8738\mathbf{X_{t-13}} + 0.8738\mathbf{X_{t-14}} + \mathbf{Z_t} - \mathbf{Z_{t-1}} - 0.6026\mathbf{Z_{t-12}}
-$$
-
-
 
 Where:
  - X_{t-1}, X_{t-2}, X_{t-12}, ... are the **observed values** of the time series from the previous month, two months ago, twelve months ago, and so on.
  - Z_{t-1} represents the **non-seasonal moving average (MA(1))** component.
  - Z_{t-12} represents the **seasonal moving average (SMA(1))** component at lag 12, which captures seasonal shocks repeating every 12 periods (e.g., months).
 
+---
 ### **Diagnostic Plots for the SARIMAX Model**
 This section generates diagnostic plots after fitting the SARIMAX model with the selected optimal parameters. These plots help assess key assumptions, such as the independence of residuals over time and their normality.
 
@@ -132,6 +129,7 @@ This section generates diagnostic plots after fitting the SARIMAX model with the
 - **Correlogram (ACF of Residuals)**  
   All spikes fall within the 95% confidence intervals (blue shaded bounds), confirming the absence of significant autocorrelation in the residuals and supporting the adequacy of the model. This is also supported by the Ljung-Box test results shown in the SARIMA model output.
 
+---
 ### **SARIMA Model Prediction & Visualization for the Test Set and Future Forecast**
 
 The SARIMA model was used to predict monthly electricity generation from natural gas for two distinct periods:
@@ -143,6 +141,7 @@ In total, the SARIMA model generated **111 monthly predictions**, combining both
 The predicted values were then visualized alongside the actual training and test samples to assess the model’s performance and long-term forecasting behavior.
 <img width="990" height="490" alt="image" src="https://github.com/user-attachments/assets/b5105009-fac3-40cc-bbf0-c0f5219ecbd9" />
 
+---
 
 # **(B) Applying the Holt-Winters Model Model to Monthly Electricity Generation Data**
 <p align="justify">
@@ -150,17 +149,10 @@ The Holt-Winters model, also known as Triple Exponential Smoothing, is an extens
 <p>
 
 The general equation of the additive Holt-Winters - Triple Exponential Smoothing is expressed as:  
-$$
 F_{t+k} = L_t + k \times T_t + S_{t+k-12}
-$$
-where:
 
-- \( L_t \): level component at time \( t \)
-- \( k \): forecast horizon, or the number of steps ahead to predict from time \( t \)
-- \( T_t \): trend component at time \( t \)
-- \( S_{t+k-12} \): seasonal component at time \( t + k - 12 \)
+<img width="1559" height="540" alt="image" src="https://github.com/user-attachments/assets/02017510-988c-403a-bd79-cab3b910b435" />
 
----
 ---
 
 ## **Holt-Winters Model Prediction & Visualization for the Test Set and Future Forecast**
@@ -173,14 +165,23 @@ Similar to the SARIMA model, the Holt-Winters model was used to predict monthly 
 The predicted values were plotted alongside the actual training and test data to evaluate the model’s accuracy and long-term forecasting performance.
 <img width="990" height="490" alt="image" src="https://github.com/user-attachments/assets/053da568-1d46-42f2-b05e-c092cc85a72c" />
 
+---
 # **Plotting the RMSE and MAE Metrics for the SARIMA and Holt-Winters Models.**
 <img width="790" height="390" alt="image" src="https://github.com/user-attachments/assets/fa7ce537-7ba8-4ec6-a4fd-288a8d8d4c21" />
+
 ### **Inference from the Barplot of RMSE and MAE:**
 The comparison of RMSE and MAE on the test dataset indicates that the Holt-Winters (Triple Exponential Smoothing) model **slightly outperformed** the SARIMA model in terms of prediction accuracy, with approximately **7–9% lower error values**. Although both models exhibited similar performance, the lower RMSE and MAE associated with the Holt-Winters model suggest it provided a **marginally better fit** for modeling electricity generation from natural gas in this context.
 
-## **Static Plot of Actual vs. Forecasted Natural Gas Electricity Generation (SARIMA & Holt-Winters)**
-The interactive plot below illustrates the actual (observed) and forecasted monthly electricity generation from natural gas, covering the test period (January 2021 – March 2025) and extended projections through March 2030. The forecasts were generated using the SARIMA and Holt-Winters (Triple Exponential Smoothing) models.
+---
+---
+## **Static and Interactive Plots of Actual vs. Forecasted Natural Gas Electricity Generation (SARIMA & Holt-Winters)**
+The plots below illustrate the actual (observed) and forecasted monthly electricity generation from natural gas, covering the test period (January 2021 – March 2025) and extended projections through March 2030. The forecasts were generated using the SARIMA and Holt-Winters (Triple Exponential Smoothing) models.
 <img width="1187" height="491" alt="image" src="https://github.com/user-attachments/assets/74d1b6aa-110f-4bcf-af95-636b7d375204" />
+
+<img width="2596" height="955" alt="image" src="https://github.com/user-attachments/assets/da891158-1ceb-45d8-9f79-67f6227faffe" />
+
+---
+---
 
 ## **Conclusions & Suggestions for Future Work**
 ### **Conclusions**
