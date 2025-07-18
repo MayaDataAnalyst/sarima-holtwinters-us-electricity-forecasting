@@ -189,10 +189,10 @@ The comparison of RMSE and MAE on the test dataset indicates that the Holt-Winte
 ---
 ## **Static and Interactive Plots of Actual vs. Forecasted Natural Gas Electricity Generation (SARIMA & Holt-Winters)**
 The plots below illustrate the actual (observed) and forecasted monthly electricity generation from natural gas, covering the test period (January 2021 – March 2025) and extended projections through March 2030. The forecasts were generated using the SARIMA and Holt-Winters (Triple Exponential Smoothing) models.
-### **Static Plot:
+### **Static Plot:**
 <img width="1187" height="491" alt="image" src="https://github.com/user-attachments/assets/74d1b6aa-110f-4bcf-af95-636b7d375204" />
 
-### **Interactive Plot:
+### **Interactive Plot:**
 <img width="2596" height="955" alt="image" src="https://github.com/user-attachments/assets/da891158-1ceb-45d8-9f79-67f6227faffe" />
 
 ---
