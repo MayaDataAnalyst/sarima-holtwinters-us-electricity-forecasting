@@ -202,7 +202,7 @@ The plots below illustrate the actual (observed) and forecasted monthly electric
 
 ## **Conclusions & Suggestions for Future Work**
 ### **Conclusions**
-The primary objective of this project was to apply a time series forecasting technique to model and predict monthly electricity generation from natural gas in the United States. To accomplish this objective, two time series models-SARIMA and Holt-Winters, were developed and compared using data from the U.S. EIA spanning a 25-year period from January 2001 to March 2025. The modling comparison results indicated that the Holt-Winters model slightly outperformed the SARIMA in terms. Model comparison results indicated that the Holt-Winters model had similar performance, as measured by RMSE and MAE.
+The main objective of this project was to apply a time series forecasting technique to model and predict monthly electricity generation from natural gas in the United States. To accomplish this objective, two time series models-SARIMA and Holt-Winters, were developed and compared using data from the U.S. EIA spanning a 25-year period from January 2001 to March 2025. The modling comparison results indicated that the Holt-Winters model slightly outperformed the SARIMA in terms. Model comparison results indicated that the Holt-Winters model had similar performance, as measured by RMSE and MAE.
 <br>
 The findings from this project can support decision-makers and energy planners in developing long-term strategies related to infrastructure investment, resource allocation, and operational planning in the energy sector. For instance, both models forecast an average electricity generation of approximately **218,000 thousand MWh (218 million MWh)** for the peak summer month of July 2029.
 
