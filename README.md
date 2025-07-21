@@ -2,7 +2,7 @@
 # **Forecasting U.S. Monthly Electricity Generation from Natural Gas (2001–2030) Using SARIMA and Holt-Winters Models**
 Long-term energy planning and sustainable resource management depend on sound forecasts of electricity generation. As demonstrated in the chart below, natural gas overtook coal in 2015 and has since become the leading source of electricity generation in the United States. Today, natural gas accounts for approximately 43% of total electricity generation, while coal contributes around 15%, highlighting a significant shift toward cleaner and more flexible energy sources.
 
-<a https://www.eia.gov/electricity/data/browser/>
+<a href="https://www.eia.gov/electricity/data/browser/">
 <img width="920" height="613" alt="Chart (Jan 2001 - March 2025)" src="https://github.com/user-attachments/assets/6b7073d6-884a-476f-9bd1-3e1e32d503ad" />
 </a>
 
