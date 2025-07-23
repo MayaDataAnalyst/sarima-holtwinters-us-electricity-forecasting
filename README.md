@@ -208,6 +208,6 @@ The findings from this project can support decision-makers and energy planners i
 
 ### **Recommendations for Future Work**
 While this study focused on natural gas, electricity in the U.S. is generated from multiple energy sources such as coal, nuclear, wind, and solar. **For future work**, it is recommended to extend this analysis by developing a **multivariate time series model** that predicts electricity generation from multiple energy sources, enabling a more comprehensive understanding of the national electricity supply mix.
-One possible extension of this work is to incorporate **external factors**—such as fuel prices or policy changes—into the forecasting models. Time series techniques like SARIMAX and Facebook Prophet with regressors are well-suited for modeling such relationships, offering deeper insights into the drivers of electricity generation trends.
+One possible extension of this work is to incorporate **external factors**—such as fuel prices or policy changes—into the forecasting models. Time series techniques like SARIMA and Facebook Prophet with regressors are well-suited for modeling such relationships, offering deeper insights into the drivers of electricity generation trends.
 
 
