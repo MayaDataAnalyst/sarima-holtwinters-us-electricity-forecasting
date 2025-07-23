@@ -96,7 +96,7 @@ The custom grid search method identified **ARIMA(1,1,1)(0,1,1)[12]** as the best
 
 $$(1 - 0.8738B)(1 - B)(1 - B^{12})X_t = (1 - 1.0000B)(1 - 0.6026B^{12})Z_t$$
 
-Where:
+where:
 - X<sub>t</sub> is the **predicted value** of the time series (monthly electricity generation from natural gas) at time t,
 - B is the **backshift operator:**
  $$BX_t = X_{t-1} \    or   \  B^{12}X_t = X_{t-12} \ $$
@@ -112,7 +112,7 @@ $$
 \mathbf{X_t} = 1.8738\mathbf{X_{t-1}} - 0.8738\mathbf{X_{t-2}} + \mathbf{X_{t-12}} - 1.8738\mathbf{X_{t-13}} + 0.8738\mathbf{X_{t-14}} + \mathbf{Z_t} - \mathbf{Z_{t-1}} - 0.6026\mathbf{Z_{t-12}}
 $$
 
-Where:
+where:
 - X<sub>t−1</sub>, X<sub>t−2</sub>, X<sub>t−12</sub>, ... are the **observed values** of the time series from the previous month, two months ago, twelve months ago, and so on.
 - Z<sub>t−1</sub> represents the **non-seasonal moving average (MA(1))** component.
 - Z<sub>t−12</sub> represents the **seasonal moving average (SMA(1))** component at lag 12, which captures seasonal shocks repeating every 12 periods (e.g., months).
